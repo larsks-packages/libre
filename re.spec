@@ -1,11 +1,13 @@
 Name:           re
 Version:        0.4.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Portable SIP library (runtime)
 
 License:        BSD
 URL:            http://www.creytiv.com/re.html
 Source0:        http://www.creytiv.com/pub/%{name}-%{version}.tar.gz
+
+BuildRequires:  openssl-devel
 
 %description
 Libre is a portable and generic library for real-time communications with
