@@ -1,6 +1,6 @@
 Name:           libre
 Version:        0.4.4
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Portable SIP library (runtime)
 
 License:        BSD
@@ -41,7 +41,7 @@ make %{?_smp_mflags} LIBDIR=%{_libdir}
 %install
 rm -rf $RPM_BUILD_ROOT
 %make_install LIBDIR=%{_libdir} MKDIR=%{_datadir}/re
-
+rm -f $RPM_BUILD_ROOT%{_libdir}/libre.a
 
 %files
 %doc docs/*
@@ -49,8 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libre.so
 
 %files devel
-%{_includedir}/re/
-%{_libdir}/libre.a
+%dir %{_includedir}/re/
+%{_includedir}/re/*.h
+%dir %{_datadir}/re/
 %{_datadir}/re/re.mk
 
 %post -p /sbin/ldconfig
