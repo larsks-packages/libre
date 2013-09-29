@@ -1,9 +1,9 @@
-This `README` was generated automatically using `rpm-build-readme` at Sat Sep 28 22:15:46 EDT 2013.
+This `README` was generated automatically using `rpm-build-readme` at Sun Sep 29 09:13:25 EDT 2013.
 
 Packages built by this spec file
 ================================
 
-re
+libre
 -------------------------------------
 
 Libre is a portable and generic library for real-time communications with
@@ -12,7 +12,8 @@ STUN/TURN/ICE, BFCP and DNS Client.
 
 This package contains the runtime libraries necessary to run programs
 linked against re.
-re-devel
+
+libre-devel
 -------------------------------------
 
 Libre is a portable and generic library for real-time communications with
@@ -21,12 +22,14 @@ STUN/TURN/ICE, BFCP and DNS Client.
 
 This package contains the libraries and header files necessary to compile
 code that uses re.
-re-debuginfo
+
+libre-debuginfo
 -------------------------------------
 
-This package provides debug information for package re.
+This package provides debug information for package libre.
 Debug information is useful when developing applications that use this
 package or when debugging this package.
+
 
 Sources used by this spec file
 ==============================

@@ -1,11 +1,11 @@
-Name:           re
+Name:           libre
 Version:        0.4.4
 Release:        2%{?dist}
 Summary:        Portable SIP library (runtime)
 
 License:        BSD
 URL:            http://www.creytiv.com/re.html
-Source0:        http://www.creytiv.com/pub/%{name}-%{version}.tar.gz
+Source0:        http://www.creytiv.com/pub/re-%{version}.tar.gz
 
 BuildRequires:  openssl-devel
 
