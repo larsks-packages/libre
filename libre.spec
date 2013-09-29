@@ -1,6 +1,6 @@
 Name:           libre
 Version:        0.4.4
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Portable SIP library (runtime)
 
 License:        BSD
@@ -31,7 +31,7 @@ code that uses re.
 
 
 %prep
-%setup -q
+%setup -q -n re-%{version}
 
 
 %build
