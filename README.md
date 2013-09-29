@@ -1,4 +1,4 @@
-This `README` was generated automatically using `rpm-build-readme` at Sun Sep 29 09:13:25 EDT 2013.
+This `README` was generated automatically using `rpm-update-readme` at Sun Sep 29 12:46:55 EDT 2013.
 
 Packages built by this spec file
 ================================
