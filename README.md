@@ -1,4 +1,4 @@
-This `README` was generated automatically using rpm-build-readme at Sat Sep 28 22:06:51 EDT 2013.
+This `README` was generated automatically using `rpm-build-readme` at Sat Sep 28 22:15:46 EDT 2013.
 
 Packages built by this spec file
 ================================
@@ -32,3 +32,8 @@ Sources used by this spec file
 ==============================
 
 - Source0: http://www.creytiv.com/pub/re-0.4.4.tar.gz
+
+Requirements for building this package
+======================================
+
+- openssl-devel
