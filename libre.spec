@@ -63,6 +63,11 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/libre.a
 
 %changelog
 
+* Sun Sep 29 2013 Lars Kellogg-Stedman <lars@redhat.com> 0.4.4-5
+- generate a versioned shared library
+- removed static library from devel package
+- ensure correct ownership of directories
+
 * Fri Sep 27 2013 Lars Kellogg-Stedman <lars@redhat.com> 0.4.4-1
 - initial package
 
