@@ -1,11 +1,12 @@
 Name:           libre
 Version:        0.4.4
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Portable SIP library (runtime)
 
 License:        BSD
 URL:            http://www.creytiv.com/re.html
 Source0:        http://www.creytiv.com/pub/re-%{version}.tar.gz
+Patch100:       libre-0.4.4-lib-version.patch
 
 BuildRequires:  openssl-devel
 
@@ -32,7 +33,7 @@ code that uses re.
 
 %prep
 %setup -q -n re-%{version}
-
+%patch100 -p1 -b.libversion
 
 %build
 make %{?_smp_mflags} LIBDIR=%{_libdir}
@@ -41,18 +42,20 @@ make %{?_smp_mflags} LIBDIR=%{_libdir}
 %install
 rm -rf $RPM_BUILD_ROOT
 %make_install LIBDIR=%{_libdir} MKDIR=%{_datadir}/re
+ln -s libre.so.%{version} $RPM_BUILD_ROOT%{_libdir}/libre.so
 rm -f $RPM_BUILD_ROOT%{_libdir}/libre.a
 
 %files
 %doc docs/*
 
-%{_libdir}/libre.so
+%{_libdir}/libre.so.*
 
 %files devel
 %dir %{_includedir}/re/
 %{_includedir}/re/*.h
 %dir %{_datadir}/re/
 %{_datadir}/re/re.mk
+%{_libdir}/libre.so
 
 %post -p /sbin/ldconfig
 

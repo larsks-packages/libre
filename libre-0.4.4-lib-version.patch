@@ -1,0 +1,22 @@
+diff --git a/Makefile b/Makefile
+index 471e4ea..0e9d98f 100644
+--- a/Makefile
++++ b/Makefile
+@@ -44,7 +44,7 @@ MKDIR   := $(PREFIX)/share/re
+ CFLAGS	+= -Iinclude
+ 
+ MODMKS	:= $(patsubst %,src/%/mod.mk,$(MODULES))
+-SHARED  := libre$(LIB_SUFFIX)
++SHARED  := libre$(LIB_SUFFIX).$(VERSION)
+ STATIC	:= libre.a
+ 
+ include $(MODMKS)
+@@ -61,7 +61,7 @@ all: $(SHARED) $(STATIC)
+ 
+ $(SHARED): $(OBJS)
+ 	@echo "  LD      $@"
+-	@$(LD) $(LFLAGS) $(SH_LFLAGS) $^ $(LIBS) -o $@
++	@$(LD) $(LFLAGS) $(SH_LFLAGS) $^ $(LIBS) -o $@ -Wl,-soname,$(SHARED)
+ 
+ 
+ $(STATIC): $(OBJS)
